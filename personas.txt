@@ -1,0 +1,3 @@
+Franco; Arturi; 20; 174
+Franco; Arturi; 25; 174
+Franco; Arturi; 30; 174
