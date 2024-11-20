@@ -1,21 +1,38 @@
+""""
 
+Modifique el ejercicio anterior para que, en caso de que una de las listas
+tenga más elementos que la otra, se sumen dichos elementos al final de la
+nueva lista
 
 """
 
-Eliminar de una lista de palabras las palabras que se encuentren en una segunda lista. 
-Imprimir la lista original, la lista de palabras a eliminar y la lista resultante.
+def cambiarOrden(lista1, lista2):
+    listaAux=[]
+    if len(lista1)!=len(lista2):
+        if len(lista1)>len(lista2):
+            for i in range(len(lista2)):
+                listaAux.append(lista1[i])
+                listaAux.append(lista2[i])
+            for i in range(len(lista2),len(lista1)):
+                listaAux.append(lista1[i])
+            return listaAux
+        elif len(lista2)>len(lista1):
+            for i in range(len(lista1)):
+                listaAux.append(lista1[i])
+                listaAux.append(lista2[i])
+            for i in range(len(lista1),len(lista2)):
+                listaAux.append(lista2[i])
+            return listaAux
 
-"""
+    else:
 
-x=["as","aass","htdc","a","as","ssda3","as"]
-z=["as","a"]
+        for i in range(len(lista1)):
+            listaAux.append(lista1[i])
+            listaAux.append(lista2[i])
+        return listaAux
 
-def eliminarPalabras(l1,l2):
-    print(l1)
-    print(l2)
-    for i in l2:
-        while i in l1:
-            l1.remove(i)
-    print(l1)
 
-eliminarPalabras(x,z)
+Lista1 = ["Hola","nombre","juan","Carlos","De","Cordoba"]
+Lista2 = ["mi","es","Perez"]
+
+print(cambiarOrden(Lista2,Lista1))

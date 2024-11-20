@@ -1,21 +1,50 @@
 """
 
-Escribir una función que reciba una lista como parámetro y devuelva True si la lista está ordenada
-en forma ascendente o False en caso contrario. Por ejemplo, ordenada([1, 2, 3]) retorna True y 
-ordenada(['b', 'a']) retorna False. Desarrollar además un programa para verificar el comportamiento de la función.
+Desarrollar cada una de las siguientes funciones y escribir un programa
+que permita verificar su funcionamiento imprimiendo la lista luego de invocar a cada función:
+
+a. Cargar una lista con números al azar de cuatro dígitos. La 
+cantidad de elementos también será un número al azar de dos dígitos. 
+Realice la composición de la lista por comprensión y de la forma habitual 
+(tendrá dos funciones distintas).
+
+b. Calcular y devolver la sumatoria de todos los elementos de la lista anterior.
+
+c. Eliminar todas las apariciones de un valor en la lista anterior. El valor a 
+eliminar se ingresa desde el teclado y la función lo recibe como parámetro. 
+Utilice comprensión de listas para resolverlo.
+
+d. Determinar si el contenido de una lista cualquiera es capicúa, sin
+usar listas auxiliares. Un ejemplo de lista capicúa es [50,17,91,17,50].
 
 """
 
-def chequeoOrden(l1):
-    print(f"Lista original: {l1}")
-    print(f"Lista ordenada: {sorted(l1)}")
-    if l1 == sorted(l1):
-        return True
-    else:
-        return False
+import random as r
 
-x=[1,2,3,4]
-y=[1,3,2,4]
 
-sorted
-print(chequeoOrden(y))
+#A
+def cargarLista():
+    lista=[]
+    for i in range(r.randint(10,99)):
+        lista.append(r.randint(1000,9999))
+    return lista
+
+def cargarListaComprension():
+    lista={r.randint(1000,9999) for x in range(r.randint(10,99))}
+    return lista
+
+#B
+
+def suma(lista):
+    return (sum(lista))
+
+def eliminarNum(lista):
+    
+
+
+
+
+
+
+
+
